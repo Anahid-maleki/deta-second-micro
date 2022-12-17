@@ -12,8 +12,8 @@ def home():
 #@app.route("/info",methods=['GET'])
 #def user_github():
 #    return {response.json}  
-@app.route("/info/<username>")
-def get_info(username):
-    url="https://api.github.com/users/<username>"
+@app.route("/info")
+def get_info():
+    url="https://api.github.com/users"
     response=requests.get(url,headers={'athorization':"token{}".format(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)})
-    return f"{response.json}"
+    return {response.json}
