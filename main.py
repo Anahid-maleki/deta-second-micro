@@ -1,4 +1,4 @@
-from flask import Flask,render_template,requests
+from flask import Flask,render_template
 import urllib.request, json
 import os
 #response=requests.get("https://api.github.com/users")
