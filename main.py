@@ -8,6 +8,6 @@ def Hello_User(username):
 @app.route('/home',methods=['GET'])
 def Home():
     return render_template("text.html") 
-@app.route("/get user",methods=['GET'])
-def user_github():
-    return f"{response.json}"    
+#@app.route("/get user",methods=['GET'])
+#def user_github():
+#    return f"{response.json}"    
