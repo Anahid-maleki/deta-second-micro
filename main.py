@@ -10,4 +10,4 @@ def Home():
     return render_template("text.html") 
 @app.route("/info",methods=['GET'])
 def user_github():
-    return f"{response.json}"    
+    return {response.json}    
