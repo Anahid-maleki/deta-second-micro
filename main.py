@@ -1,6 +1,7 @@
 from flask import Flask,render_template
-import requests, json
+import requests,json
 import os
+my_key=os.environ.get('API_key')
 #response=requests.get("https://api.github.com/users")
 app=Flask(__name__)
 @app.route('/<username>',methods=['GET'])
@@ -15,5 +16,5 @@ def home():
 @app.route("/info")
 def get_info():
     url="https://api.github.com/users"
-    response=requests.get(url,headers={'athorization':"token{}".format(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)})
+    response=requests.get(url,headers={'athorization':"token{}".format(my_key)})
     return {response.json}
