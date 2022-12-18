@@ -17,4 +17,5 @@ def home():
 def get_info():
     url="https://api.github.com/users"
     response=requests.get(url,headers={'athorization':"token{}".format(my_key)})
-    return {response.json}
+    for x in response.json():
+       return {x["name"]}
