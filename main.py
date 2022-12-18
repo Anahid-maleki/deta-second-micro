@@ -1,7 +1,7 @@
 from flask import Flask,render_template
 import requests
 from dotenv import load_dotenv
-import json
+
 import os
 load_dotenv()
 my_key=os.environ.get('API_key')
