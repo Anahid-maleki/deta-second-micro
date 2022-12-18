@@ -1,6 +1,9 @@
 from flask import Flask,render_template
-import requests,json
+import requests
+from dotenv import load_dotenv
+import json
 import os
+
 my_key=os.environ.get('API_key')
 #response=requests.get("https://api.github.com/users")
 app=Flask(__name__)
