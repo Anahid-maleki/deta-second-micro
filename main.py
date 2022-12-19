@@ -17,7 +17,7 @@ def home():
 def get_info():
     url="https://api.github.com/users/Anahid-maleki"
     response=requests.get(url,headers={'my_token': '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'})
-    jsonData=response.json
+    jsonData=response.json()
     return jsonify(jsonData)
     
 
