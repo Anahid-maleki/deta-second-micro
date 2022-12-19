@@ -13,7 +13,7 @@ def home():
 #@app.route("/info",methods=['GET'])
 #def user_github():
 #    return {response.json}  
-@app.route("/info")
+@app.route("/info",methods=["GET"])
 def get_info():
     url="https://api.github.com/users"
     response=requests.get(url,headers={'my_token': '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'})
