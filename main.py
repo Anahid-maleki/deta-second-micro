@@ -17,6 +17,6 @@ def home():
 def get_info():
     url="https://api.github.com/users"
     response=requests.get(url,headers={'my_token': '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'})
-    return jsonify(response)
+    return {response.txt}
 
       
