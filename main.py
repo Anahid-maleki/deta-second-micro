@@ -16,7 +16,7 @@ def home():
 @app.route("/info",methods=["GET"])
 def get_info():
     url="https://api.github.com/users/Anahid-maleki"
-    response=requests.get(url,headers={'my_token': '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'})
+    response=requests.get(url,headers={'my_token': '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'})
     jsonData=response.json()
     return jsonify(jsonData)
     
