@@ -1,5 +1,5 @@
-from flask import Flask,render_template,jsonify
-import requests ,json
+from flask import Flask,render_template
+#import requests ,json
 #import os
 #my_key=os.environ.get('API_key')
 #response=requests.get("https://api.github.com/users")
