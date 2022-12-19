@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,jsonify
 import requests ,json
 #import os
 #my_key=os.environ.get('API_key')
@@ -17,7 +17,6 @@ def home():
 def get_info():
     url="https://api.github.com/users"
     response=requests.get(url,headers={'my_token': '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'})
-    jsonData=response.json()
-    return jsonData
+    return jsonify(response)
 
       
