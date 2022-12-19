@@ -1,10 +1,7 @@
 from flask import Flask,render_template
 import requests
-from dotenv import load_dotenv
-
-import os
-load_dotenv()
-my_key=os.environ.get('API_key')
+#import os
+#my_key=os.environ.get('API_key')
 #response=requests.get("https://api.github.com/users")
 app=Flask(__name__)
 @app.route('/<username>',methods=['GET'])
@@ -18,7 +15,10 @@ def home():
 #    return {response.json}  
 @app.route("/info")
 def get_info():
-    url="https://api.github.com/users/Anahid-maleki"
-    response=requests.get(url,headers={'athorization':"token{}".format(my_key)})
+    url="https://api.github.com/users"
+    response=requests.get(url,headers={'my_token': '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'})
+    jsonDta=response.json()
     for x in response.json():
-       return {x["name"]}
+       return {x["login"]}
+
+      
