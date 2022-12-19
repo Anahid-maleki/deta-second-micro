@@ -1,5 +1,5 @@
 from flask import Flask,render_template
-import requests
+import requests ,json
 #import os
 #my_key=os.environ.get('API_key')
 #response=requests.get("https://api.github.com/users")
@@ -17,8 +17,8 @@ def home():
 def get_info():
     url="https://api.github.com/users"
     response=requests.get(url,headers={'my_token': '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'})
-    jsonDta=response.json()
-    for x in response.json():
+    jsonData=response.json()
+    for x in jsonData:
        return {x["login"]}
 
       
