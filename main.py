@@ -18,7 +18,8 @@ def get_info():
     url="https://api.github.com/users"
     response=requests.get(url,headers={'my_token': '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'})
     jsonData=response.json()
-    for x in jsonData:
-       return {x["login"]}
+    #for x in jsonData:
+    #   return {x["login"]}
+    return "HEllO github"
 
       
