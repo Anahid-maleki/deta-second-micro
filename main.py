@@ -1,7 +1,10 @@
 from flask import Flask,render_template,jsonify 
 import requests
+from dotenv import load_dotenv
+load_dotenv()
 #import json
-#import os
+import os
+password=os.getenv("my_token")
 #my_key=os.environ.get('API_key')
 #response=requests.get("https://api.github.com/users")
 app=Flask(__name__)
@@ -15,7 +18,7 @@ def home():
 @app.route("/",methods=["GET"])
 def get_info():
    url="https://api.github.com/users/Anahid-maleki"
-   response=requests.get(url,headers={'my_token': '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'})
+   response=requests.get(url,headers={"my_token":"password"})
    jsonData=response.json()
    return jsonify(jsonData)
     
